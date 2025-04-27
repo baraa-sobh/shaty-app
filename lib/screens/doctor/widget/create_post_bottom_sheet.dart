@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
 import 'package:shaty/core/extensions/localization_extension.dart';
 
-import 'package:shaty/shared/widgets/primary_button .dart';
+import '../../../shared/widgets/primary_button .dart';
 
 class CreatePostBottomSheet extends StatelessWidget {
   const CreatePostBottomSheet({super.key});

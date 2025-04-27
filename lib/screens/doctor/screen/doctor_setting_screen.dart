@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/extensions/localization_extension.dart';
-import 'package:shaty/shared/widgets/change_password_form.dart';
-import 'package:shaty/shared/widgets/show_alert_Dialog.dart';
+
 import '../../../core/constants/app_colors.dart';
+import '../../../shared/widgets/change_password_form.dart';
+import '../../../shared/widgets/show_alert_Dialog.dart';
 import '../widget/build_settings_tile.dart';
 import '../widget/profile_setting_header.dart';
+
 class DoctorSettingScreen extends StatefulWidget {
   const DoctorSettingScreen({super.key});
 
@@ -14,6 +16,7 @@ class DoctorSettingScreen extends StatefulWidget {
 
 class _DoctorSettingScreenState extends State<DoctorSettingScreen> {
   bool isNotificationsEnabled = true;
+
   final TextEditingController newPasswordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
@@ -46,7 +49,6 @@ class _DoctorSettingScreenState extends State<DoctorSettingScreen> {
                   // TODO
                   _showNotificationBottomSheet(context);
 
-
                 },
               ),
               const Divider(color: Colors.grey, thickness: 0.5, height: 20),
@@ -55,6 +57,7 @@ class _DoctorSettingScreenState extends State<DoctorSettingScreen> {
                 title: context.loc.archives,
                 onTap: () {
                   //TODO
+
                 },
               ),
               const Divider(color: Colors.grey, thickness: 0.5, height: 20),
@@ -118,6 +121,8 @@ class _DoctorSettingScreenState extends State<DoctorSettingScreen> {
       ),
       ),);
   }
+
+
   void _showCreateTipsBottomSheet(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -163,6 +168,7 @@ class _DoctorSettingScreenState extends State<DoctorSettingScreen> {
     print('New password confirmed');
   }
 }
+
 // ListView(
 //   shrinkWrap: true,
 //   physics: NeverScrollableScrollPhysics(),

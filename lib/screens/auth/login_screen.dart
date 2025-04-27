@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:shaty/core/constants/app_colors.dart';
 import 'package:shaty/core/constants/user_type.dart';
 import 'package:shaty/core/extensions/localization_extension.dart';
 import 'package:shaty/shared/widgets/labeled_text_field.dart';
 import 'package:shaty/shared/widgets/primary_button%20.dart';
+
+import '../../core/constants/app_colors.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

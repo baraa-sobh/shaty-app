@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shaty/core/extensions/localization_extension.dart';
+
 import '../../../core/constants/app_colors.dart';
 
 class ProfileStats extends StatelessWidget {

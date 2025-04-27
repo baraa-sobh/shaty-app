@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/shared/widgets/doctor_sign_in.dart';
-import 'package:shaty/shared/widgets/patient_sign_in.dart';
-import 'package:shaty/shared/widgets/primary_button%20.dart';
+
 import '../../controllers/sign_in_controllers.dart';
 import '../../core/enums/user_role_enum.dart';
-import 'package:shaty/shared/widgets/toggle_user_role.dart';
+import '../../shared/widgets/doctor_sign_in.dart';
+import '../../shared/widgets/patient_sign_in.dart';
+import '../../shared/widgets/primary_button .dart';
+import '../../shared/widgets/toggle_user_role.dart';
+
 
 class SignInPatient extends StatefulWidget {
   const SignInPatient({super.key});
