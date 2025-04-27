@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-import 'package:shaty/widgets/labeled_text_field.dart';
-import 'package:shaty/widgets/primary_button%20.dart';
+import 'package:shaty/core/constants/user_type.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
+import 'package:shaty/shared/widgets/labeled_text_field.dart';
+import 'package:shaty/shared/widgets/primary_button%20.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -61,7 +62,12 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 20,),
               PrimaryButton(label: context.loc.login,
                   onPressed: () {
-                Navigator.pushReplacementNamed(context, '/bottom_navigation_screen');
+                if(UserType.isDoctor){
+                  Navigator.pushReplacementNamed(context, '/bottom_navigation_screen');
+
+                }else {
+                Navigator.pushReplacementNamed(context, '/patient_bottom_nav_bar');
+                }
                   },),
               SizedBox(height: 40,),
               InkWell(

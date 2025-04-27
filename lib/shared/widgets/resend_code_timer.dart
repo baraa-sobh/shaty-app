@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:shaty/extensions/localization_extension.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
 
 class ResendCodeTimer extends StatefulWidget {
   final VoidCallback onResend;

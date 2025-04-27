@@ -8,6 +8,7 @@ import 'package:shaty/screens/auth/verification_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shaty/screens/doctor/screen/bottom_navigation_screen.dart';
 import 'package:shaty/screens/doctor/screen/doctor_home_screen.dart';
+import 'package:shaty/screens/patient/widget/patient_bottom_nav_bar.dart';
 
 
 void main() {
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/change_password_screen': (context)=> const ChangePasswordScreen(),
         '/doctor_home_screen': (context)=> const DoctorHomeScreen(),
         '/bottom_navigation_screen': (context)=> const BottomNavigationScreen(),
+        '/patient_bottom_nav_bar': (context)=> const PatientBottomNavBar(),
       },
       localizationsDelegates: const [
         AppLocalizations.delegate,

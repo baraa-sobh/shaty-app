@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
+
+import '../../common/post_details_screen.dart';
 
 class PostsSection extends StatelessWidget {
   const PostsSection({super.key});
@@ -118,11 +120,29 @@ class PostsSection extends StatelessWidget {
                     /// Action Buttons
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
-                        PostAction(icon: Icons.favorite_border, label: 'إعجاب'),
-                        PostAction(icon: Icons.comment_outlined, label: 'تعليق'),
-                        PostAction(icon: Icons.share_outlined, label: 'مشاركة'),
-                        PostAction(icon: Icons.bookmark_border, label: 'حفظ'),
+                      children:  [
+                        PostAction(
+                          icon: Icons.comment_outlined,
+                          label: 'تعليق',
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PostDetailsScreen(postContent: post['content']!), // تأكدت تمرر النص
+                              ),
+                            );
+                          },
+                        ),
+                        PostAction(
+                          icon: Icons.share_outlined,
+                          label: 'مشاركة',
+                          onPressed: () {},
+                        ),
+                        PostAction(
+                          icon: Icons.bookmark_border,
+                          label: 'حفظ',
+                          onPressed: () {},
+                        ),
                       ],
                     ),
                   ],
@@ -139,17 +159,27 @@ class PostsSection extends StatelessWidget {
 class PostAction extends StatelessWidget {
   final IconData icon;
   final String label;
+  final VoidCallback onPressed;
 
-  const PostAction({super.key, required this.icon, required this.label});
+  const PostAction({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.onPressed,
+  });
+
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon, size: 22, color: Colors.grey[700]),
-        const SizedBox(width: 6),
-        Text(label, style: TextStyle(color: Colors.grey[700])),
-      ],
+    return InkWell(
+      onTap: onPressed,
+      child: Row(
+        children: [
+          Icon(icon, size: 22, color: Colors.grey[700]),
+          const SizedBox(width: 6),
+          Text(label, style: TextStyle(color: Colors.grey[700])),
+        ],
+      ),
     );
   }
 }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-
-
+import 'package:shaty/core/extensions/localization_extension.dart';
 
 class BiographyDoctor extends StatelessWidget {
   const BiographyDoctor({super.key});

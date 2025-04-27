@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../widget/tips_section.dart';
-import '../widget/DoctorsPost.dart';
-import '../widget/home_doctor_header.dart';
-
-class DoctorHomeScreen extends StatelessWidget {
-  const DoctorHomeScreen({super.key});
+import '../../doctor/widget/DoctorsPost.dart';
+import '../../doctor/widget/home_doctor_header.dart';
+import '../../doctor/widget/tips_section.dart';
+import '../widget/patient_tips.dart';
+class PatientHomeScreen extends StatelessWidget {
+  const PatientHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class DoctorHomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  TipsSection(),
+                  PatientTips(),
                   Divider(
                     thickness: 1,
                   ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-import '../core/constants/app_colors.dart';
+import '../../core/constants/app_colors.dart';
+
 
 class PinCodeInput extends StatelessWidget {
   final void Function(String) onCompleted;

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shaty/core/constants/user_type.dart';
 import 'package:shaty/core/extensions/localization_extension.dart';
-import 'package:shaty/screens/doctor/widget/create_tips_bottom_sheet.dart';
+
 import '../../../core/constants/app_colors.dart';
 
-class TipsSection extends StatelessWidget {
-  const TipsSection({super.key});
+class PatientTips extends StatelessWidget {
+  const PatientTips({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,6 @@ class TipsSection extends StatelessWidget {
       'نم جيدًا لتحسين صحتك النفسية.',
       'مارس الرياضة 3 مرات أسبوعيًا.',
     ];
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -30,21 +28,13 @@ class TipsSection extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              if(UserType.isDoctor)
-              IconButton(
-                onPressed: () {
-                  _showCreateTipsBottomSheet(context);
-                  },
-                icon:
-                    const Icon(Icons.add_circle, color: AppColors.primaryColor),
-              ),
             ],
           ),
           const SizedBox(height: 20),
           Container(
-            height: 180, // ارتفاع يكفي لعرض 3 نصائح تقريبًا مع تمرير
+            height: 60, // ارتفاع يكفي لعرض 3 نصائح تقريبًا مع تمرير
             child: ListView.separated(
-              itemCount: tips.length,
+              itemCount: 1,
               separatorBuilder: (_, __) => const SizedBox(height: 10),
               itemBuilder: (context, index) {
                 final tip = tips[index];
@@ -74,20 +64,7 @@ class TipsSection extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      if(UserType.isDoctor)...[
-                        IconButton(
-                        icon: const Icon(Icons.edit, size: 20),
-                        onPressed: () {
-                          // TODO: تعديل النصيحة
-                        },
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.delete_outline, size: 20),
-                        onPressed: () {
-                          // TODO: حذف النصيحة
-                        },
-                      ),
-                      ],
+
                     ],
                   ),
                 );
@@ -96,16 +73,6 @@ class TipsSection extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-  void _showCreateTipsBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) => const CreateTipsBottomSheet(),
     );
   }
 }

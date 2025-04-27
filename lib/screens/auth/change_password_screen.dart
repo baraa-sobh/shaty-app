@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-import 'package:shaty/widgets/change_password_form.dart';
-import 'package:shaty/widgets/labeled_text_field.dart';
-import 'package:shaty/widgets/primary_button%20.dart';
+import 'package:shaty/shared/widgets/change_password_form.dart';
 class ChangePasswordScreen extends StatefulWidget {
   const ChangePasswordScreen({super.key});
 

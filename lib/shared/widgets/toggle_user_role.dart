@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-import '../core/constants/app_colors.dart';
-import '../core/enums/user_role_enum.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
+import '../../core/constants/app_colors.dart';
+import '../../core/enums/user_role_enum.dart';
 
 class RoleSelector extends StatelessWidget {
   final UserRole selectedRole;

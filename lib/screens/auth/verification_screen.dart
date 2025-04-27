@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-import 'package:shaty/widgets/pin_code_input.dart';
-import 'package:shaty/widgets/primary_button%20.dart';
-import 'package:shaty/widgets/resend_code_timer.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
+import 'package:shaty/shared/widgets/pin_code_input.dart';
+import 'package:shaty/shared/widgets/primary_button%20.dart';
+import 'package:shaty/shared/widgets/resend_code_timer.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shaty/core/constants/app_colors.dart';
-import 'package:shaty/extensions/localization_extension.dart';
-import 'package:shaty/widgets/labeled_text_field.dart';
-import 'package:shaty/widgets/primary_button%20.dart';
+import 'package:shaty/core/extensions/localization_extension.dart';
+import 'package:shaty/shared/widgets/labeled_text_field.dart';
+import 'package:shaty/shared/widgets/primary_button%20.dart';
 
 class RestPasswordScreen extends StatefulWidget {
   const RestPasswordScreen({super.key});

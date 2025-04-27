@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:shaty/screens/doctor/widget/ProfileStats.dart';
 
+import '../widget/DoctorsPost.dart';
 import '../widget/biography_doctor.dart';
-import '../widget/doctor_post_section.dart';
 import '../widget/profile_header.dart';
 import '../widget/show_tips.dart';
 
@@ -34,7 +34,6 @@ class DoctorProfileScreen extends StatelessWidget {
                 height: 10,
               ),
               BiographyDoctor(),
-        
               Divider(thickness: 2, color: Colors.grey[300]),
               SizedBox(
                 height: 8,
@@ -47,8 +46,7 @@ class DoctorProfileScreen extends StatelessWidget {
               SizedBox(
                 height: 8,
               ),
-              DoctorPostSection(),
-
+              PostsSection(),
             ],
           ),
         ),
